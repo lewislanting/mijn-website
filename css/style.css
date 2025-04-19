@@ -1,8 +1,61 @@
 html, body {
-    background-color: #312e2e;
+    background-color: #f1f3f5;
+    font-family: 'Inter';
+    color: #2b2d42;
+}
+
+a {
+    text-decoration: none;
+    color: #d90429;
+}
+
+a:hover {
+    color: #ef233c;
+}
+
+.reverse {
+    background-color: #2b2d42;
     color: #f1f3f5;
 }
 
-a, a:hover, .rood {
-    color: #a6242f;
+.rood {
+    color: #d90429;
+}
+
+.bi:hover {
+    color: #ef233c;
+}
+
+span {
+    color: red;
+}
+
+.btn-primary {
+    --bs-btn-bg: #d90429;
+    --bs-btn-border-color: #d90429;
+    --bs-btn-hover-bg: #ef233c;
+    --bs-btn-hover-border-color: #ef233c;
+    --bs-btn-active-bg: #ef233c;
+    --bs-btn-active-border-color: #ef233c;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: #d90429;
+    --bs-dropdown-link-active-color: #f1f3f5;
+    --bs-dropdown-link-hover-bg: #ef233c;
+    --bs-dropdown-link-hover-color: #f1f3f5;
+}
+
+.dropdown-item.active:hover {
+  background-color: #ef233c;
+  color: #f1f3f5;
+}
+
+.image-hover {
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+a:hover .image-hover {
+    border-color: #ef233c;
 }

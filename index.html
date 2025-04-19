@@ -4,99 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Overzicht | Portfolio Lewis Lanting</title>
+    <!-- resetten van browsers -->
+    <link rel="stylesheet" href="css/reset.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- JavaScript: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <!-- Inter font -->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <!-- eigen geschreven css voor jouw html-bestand -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="container">
     <header>
-        <nav>
-             <a href="index.html"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
-             <a href="index.html">home</a>
-             <a href="portfolio.html">portfolio</a>
-             <!-- Voorzie nog een dropdown voor naar projectpaginas zelf te gaan-->
-             <a href="contact.html">contact</a>
-        </nav>
+        <nav class="navbar navbar-expand">
+            <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+               <ul class="navbar-nav">
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link active" aria-current="page">home</a>
+                   </li>
+                   <li class="nav-item dropdown">
+                       <a href="portfolio.html" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
+                       <ul class="dropdown-menu p-2">
+                           <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
+                           <li><a class="dropdown-item" href="webwiz.html"><i class="bi bi-dot"></i> webwiz</a></li>
+                           <li><a class="dropdown-item" href="topdesign.html"><i class="bi bi-dot"></i> topdesign</a></li>
+                           <li><a class="dropdown-item" href="privesc.html"><i class="bi bi-dot"></i> privesc</a></li>
+                           <li><a class="dropdown-item" href="keystone.html"><i class="bi bi-dot"></i> keystone</a></li>
+                           <li><a class="dropdown-item" href="prometheus.html"><i class="bi bi-dot"></i> prometheus</a></li>
+                           <li><a class="dropdown-item" href="ansiblek3s.html"><i class="bi bi-dot"></i> ansiblek3s</a></li>
+                       </ul>
+                   </li>
+                   <li class="nav-item">
+                       <a href="contact.html" class="nav-link">contact</a>
+                   </li>
+               </ul>
+            </div>
+       </nav>
     </header>
-
-    <div class="container-fluid">
-        <div class="row">
-            <main class="col-md-9">
-                <!-- Bij verkleinen van browser verspringt er nog vanalles-->
-                <section class="row mb-5">
-                    <article class="col-md-8 p-5 fs-5 order-md-2">
-                        <h1 class="fw-bolder">Lewis Lanting</h1>
-                        <h2 class="rood">Systeem- en netwerkbeheerder</h2>
-                        <p>Als gedreven IT-consultant richt ik mij voornamelijk op systeem- en netwerkbeheer, met een sterke focus op open-source software. Mijn passie ligt in het optimaliseren van processen door middel van scripting en automatisering. Hoewel ik een Linux-enthousiast ben, ben ik niet beperkt tot dit ecosysteem. Mijn expertise strekt zich uit tot diverse domeinen, waaronder cloud computing, DevOps en Windows Server. Ik ben vastbesloten mijn vaardigheden verder te ontwikkelen en ben altijd op zoek naar nieuwe uitdagingen binnen de IT-infrastructuurwereld om mijn kennis en ervaring uit te breiden.</p>
-                        <a href="#expertise" class="btn btn-light">Mijn expertise</a>
-                    </article>
-                    <figure class="col-md-4 p-3 order-md-1">
-                        <img src="assets/images/lewis.png" alt="Foto van Lewis Lanting" class="img-fluid rounded-3">
-                        <figcaption class="small">&copy; Axxes</figcaption> 
-                    </figure>
-                </section>
-                <hr>
-
-                <h2 id="expertise" class="h1 mt-5 mb-3">Mijn expertise</h2>
-                <section class="row">
-                    <article class="col-md-6 order-1 order-md-2 p-3 fs-5">
-                        <h3 class="fw-bolder rood">Systeembeheer</h3>
-                        <p>Ik heb diepgaande kennis van het opzetten, configureren en onderhouden van verschillende soorten servers, zoals web-, database- en bestandsservers. Dit omvat het installeren van besturingssystemen, het afstemmen van serverprestaties, het implementeren van beveiligingsmaatregelen en het automatiseren van taken via scripts en tools. Daarnaast ben ik ervaren in het beheren van netwerkprotocollen, virtualisatieplatformen en het monitoren van serverstatus om de uptime en betrouwbaarheid van systemen te garanderen. Of het nu gaat om een kleine bedrijfsserver of een complexe, schaalbare omgeving, ik zorg ervoor dat alles soepel en veilig draait.</p>
-                    </article>
-                    <figure class="col-md-6 order-2 order-md-1">
-                        <img src="assets/images/linux-sfeerbeeld.jpg" alt="Foto van Linux terminal" class="img-fluid rounded-3">
-                        <figcaption class="small">&copy; Pexels</figcaption> 
-                    </figure>
-                </section>
-
-                <section class="row">
-                    <article class="col-md-6 p-3 fs-5">
-                        <h3 class="fw-bolder rood">Netwerkbeheer</h3>
-                        <p>Mijn expertise omvat het configureren van routers, switches en firewalls, het opzetten van VPN's en het beheren van IP-addressering en subnetten. Ik ben goed thuis in het monitoren van netwerkprestaties, het oplossen van netwerkproblemen en het implementeren van beveiligingsmaatregelen om de integriteit van het netwerk te waarborgen. Daarnaast heb ik ervaring met het beheren van draadloze netwerken, het optimaliseren van netwerkverkeer en het zorgen voor een stabiele en betrouwbare verbinding, zowel on-premises als in cloudomgevingen. Mijn aanpak is gericht op het bieden van veilige, efficiënte en schaalbare netwerkoplossingen die de bedrijfsvoering ondersteunen.</p>
-                    </article>
-                    <figure class="col-md-6">
-                        <img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van een computer netwerk" class="img-fluid rounded-3">
-                        <figcaption class="small">&copy; Pexels</figcaption>                         
-                    </figure>
-                </section>
-
-                <section class="row">
-                    <article class="col-md-6 order-1 order-md-2 p-3 fs-5">
-                        <h3 class="fw-bolder rood">Automatisering</h3>
-                        <p>Met een sterke focus op automatisering heb ik ruime ervaring in het implementeren van geavanceerde automatiseringsoplossingen met tools zoals Python, Ansible en Terraform. Ik ben bedreven in het schrijven van scripts en het ontwikkelen van workflows die repetitieve taken stroomlijnen, zoals het automatisch uitrollen van software, het beheren van configuraties en het opzetten van infrastructuren. Met Python kan ik maatwerkoplossingen crëeren voor diverse automaiseringsbehoeften, terwijl Ansible en Terraform mij in staat stellen om infrastructuren als code te beheren, waardoor de implementatie van servers en netwerken snel, consistent en schaalbaar wordt. Mijn aanpak zorgt voor efficiënte processen, minimaliseert menselijke fouten en vergroot de productiviteit door middel van herhaalbare en betrouwbare automatisering.</p>
-                    </article>
-                    <figure class="col-md-6 order-2 order-md-1">
-                        <img src="assets/images/computer-sfeerbeeld.jpg" alt="Foto van iemand die aan het programmeren is" class="img-fluid rounded-3">
-                        <figcaption class="small">&copy; Pexels</figcaption> 
-                    </figure>                        
-                </section>
-                    
-                <section class="row">
-                    <article class="col-md-6 p-3 fs-5">
-                        <h3 class="fw-bolder rood">Beveiliging</h3>
-                        <p>Met uitgebreide ervaring in IT-beveiliging ben ik gespecialiseerd in het implementeren van robuuste beveiligingsmaatregelen voor zowel netwerken als systemen. Ik heb diepgaande kennis van het beveiligen van Linux- en Windows-omgevingen, het configureren van firewalls, VPN's en intrusion detection systemen (IDS). Mijn expertise omvat het uitvoeren van kwetsbaarheidsanalyses, het implementeren van versleutelingstechnieken en het beheren van toegang tot kritieke systemen via rollen en permissies. Ik ben ook ervaren in het opzetten van beveiligingsbeleid en het naleven van industriestandaarden zoals GDPR en ISO 27001. Door proactief beveiligingsmaatregelen te integreren en regelmatig audits uit te voeren, zorg ik ervoor dat systemen en netwerken beschermd zijn tegen zowel externe als interne dreigingen, en minimaliseer ik de risico's van datalekken of ongeautoriseerde toegang.</p>
-                    </article>
-                    <figure class="col-md-6">
-                        <img src="assets/images/cybersecurity-sfeerbeeld.jpg" alt="Creatieve foto over hacking/cybersecurity" class="img-fluid rounded-3">
-                        <figcaption class="small">&copy; Pexels</figcaption>                         
-                    </figure>                        
-                </section>
+    <div class="row">
+        <main class="col-md-9">
+            <section class="row mb-5 p-3">
+                <article class="col-lg-7 my-3">
+                    <h1 class="rood fw-bolder">Linux System Engineer &<br>Student Systeem- en Netwerkbeheer</h1>
+                    <p class="my-3">Gepassioneerd door stabiele infrastructuur, beveiligde netwerken en slimme IT-oplossingen. Met een combinatie van praktijkervaring en een stevige opleiding zorg ik voor systemen die werken - veilig, efficiënt en schaalbaar. Altijd op zoek naar manieren om IT beter, sneller en betrouwbaarder te maken.</p>
+                    <a href="#meerovermij" class="btn btn-primary">Meer over mij</a>
+                </article>
+                <figure class="col-lg-5">
+                    <img src="assets/images/lewis.png" alt="Foto van Lewis Lanting" class="img-fluid">
+                </figure>
+            </section>
+            <hr>
+            <section class="mt-5 p-3">
+                <h2 id="meerovermij">Meer over mij</h2>
+                <p>Ik ben Lewis Lanting, een gedreven Linux System Engineer. Naast mijn werk ben ik bezig met de opleiding Systeem- en Netwerkbeheer, waar ik mijn kennis verder verdiep in netwerken, scripting en cybersecurity. In mijn vrije tijd sleutel ik graag aan mijn homelab en programmeer ik in Python.</p>
+            </section>
+            <section class="reverse p-3">
+                <h3>Ervaring</h3>
+                <article>
+                    <h4 class="h5 fw-bolder">Linux System Engineer</h4>
+                    <p class="d-flex">Port of Antwerp-Bruges <em class="ms-auto">apr 2024 - heden</em></p>
+                    <p>Als Linux System Engineer ben ik verantwoordelijk voor het beheer en de automatisatie van Linux-systemen met Ansible. Ik voer airgap-installaties uit van AWX op Kubernetes, onderhoud monitoring met Prometheus/Grafana en ontwikkel custom exporters in Python en Go. Verder automatiseer ik infrastructuurprovisioning in OpenStack met Terraform en GitLab CI/CD.</p>
+                </article>
+                <article>
+                    <h4 class="h5 fw-bolder">Support Engineer</h4>
+                    <p class="d-flex">Jan De Nul <em class="ms-auto">nov 2022 - nov 2023</em></p>
+                    <p>Verantwoordelijk voor het beheer van Jira en Confluence Data Center op RHEL, inclusief upgrades en patches met focus op hoge beschikbaarheid. Automatisering van workflows en supportprocessen via scripting. Onderhoud van Linux-servers en MS SQL Server-databases, met aandacht voor dataconsistentie.</p>
+                </article>
+            </section>
+            <section class="p-3">
+                <h3>Opleidingen</h3>
+                <article>
+                    <h4 class="h5 fw-bolder">Graduaat Systeem- en Netwerkbeheer</h4>
+                    <p class="d-flex">AP Hogeschool Antwerpen <em class="ms-auto">2024 - heden</em></p>
+                </article>
+                <article>
+                    <h4 class="h5 fw-bolder">Bachelor Elektromechanica - Procesautomatisering</h4>
+                    <p class="d-flex">AP Hogeschool Antwerpen <em class="ms-auto">2017 - 2020</em></p>
+                </article>
+            </section>
+            <section class="reverse p-3">
+                <h3>Certificaten</h3>
+                <article>
+                    <h4 class="h5 fw-bolder">Certified Kubernetes Admin (CKA)</h4>
+                    <p class="d-flex">The Linux Foundation <em class="ms-auto">Verloopt jan 2027</em></p>
+                </article>
+                <article>
+                    <h4 class="h5 fw-bolder">Red Hat Certified Engineer (RHCE)</h4>
+                    <p class="d-flex">Red Hat <em class="ms-auto">Verloopt dec 2026</em></p>
+                </article>
+                <article>
+                    <h4 class="h5 fw-bolder">Red Hat Certified System Administrator (RHCSA)</h4>
+                    <p class="d-flex">Red Hat <em class="ms-auto">Verloopt dec 2026</em></p>
+                </article>
+            </section>
+            <section class="p-3">
+                <h3>Vaardigheden</h3>
+                <table class="table table-bordered text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col" style="width:20%"">Vaardigheid</th>
+                            <th scope="col">Niveau</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <td>Linux</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ansible</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Terraform</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info" style="width: 60%">60%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Networking</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info" style="width: 60%">60%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kubernetes</td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success" style="width: 50%">50%</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
         <aside class="col-md-3">
-            <h2>Contact</h2>
-            <p>Lewis Lanting<br>
-                <a href="mailto:lewislanting@outlook.com">lewislanting@outlook.com</a><br>
-                <!-- Voorzie hier nog icons etc-->
-            </p>
+            <section class="position-sticky top-0 p-2 small">
+                <h2 class="h5 fw-bolder">Laten we jou IT uitdagingen samen aanpakken</h2>
+                <p>Ben jij op zoek naar een expert in Linux systeembeheer of netwerkoptimalisatie? Ik sta klaar om jouw technische projecten tot een succes te maken. Neem contact met me op en ontdek hoe we samen jouw infrastructuur kunnen verbeteren.</p>
+                <ul class="list-inline socials">
+                    <li class="list-inline-item">
+                    <a href="mailto:lewislanting@outlook.com">
+                        <i class="bi bi-envelope-at-fill rood"></i>
+                    </a>
+                    </li>
+                    <li class="list-inline-item">
+                    <a href="https://github.com/lewislanting" target="_blank">
+                        <i class="bi bi-github rood"></i>
+                    </a>
+                    </li>
+                    <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/lewislanting/" target="_blank">
+                        <i class="bi bi-linkedin rood"></i>
+                    </a>
+                    </li>
+                </ul>
+            </section>
         </aside>
-        </div>
     </div>
     <footer>
-        <p class="p-4">&copy; 2025 Lewis Lanting</p>
+        <p class="small">&copy; Lewis Lanting 2025 | <a href="mailto:lewislanting@outlook.com">lewislanting@outlook.com</a></p>
     </footer>
 </body>
 </html>
