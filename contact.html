@@ -17,6 +17,24 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <!-- eigen geschreven css voor jouw html-bestand -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!-- voeg map.css toe. CSS specifiek voor de kaart -->
+    <link rel="stylesheet" href="css/map.css">
+
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script> 
+
+    <!-- Eigen JavaScript-bestanden-->
+    <script src="js/map.js" defer></script>
+    <script src="js/year.js" defer></script>
 </head>
 <body class="container">
     <header>
@@ -51,21 +69,21 @@
             <section class="text-center mb-5">
                 <h1 class="rood fw-bolder">Contactpagina</h1>
                 <p class="fw-bolder">Ik sta klaar om te helpen - stuur een bericht!</p>
-                <iframe width="800" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=700&amp;hl=en&amp;q=Schoten+(Lewis%20Lanting)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>    
+                <div id="map"></div>
             </section>
             <hr>
-            <form method="post">
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                 <fieldset class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="firstName" class="form-label">Voornaam <span>*</span></label>
+                        <label for="firstName" class="form-label">Voornaam <span class="rood">*</span></label>
                         <input type="text" class="form-control" id="firstName" placeholder="Voornaam" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="lastName" class="form-label">Achternaam <span>*</span></label>
+                        <label for="lastName" class="form-label">Achternaam <span class="rood">*</span></label>
                         <input type="text" class="form-control" id="lastName" placeholder="Achternaam" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="mail" class="form-label">E-mail <span>*</span></label>
+                        <label for="mail" class="form-label">E-mail <span class="rood">*</span></label>
                         <input type="email" class="form-control" id="mail" placeholder="E-mail" required>
                     </div>
                     <div class="col-md-6">
@@ -111,7 +129,7 @@
         </aside>
     </div>
     <footer>
-        <p class="small">&copy; Lewis Lanting 2025 | <a href="mailto:lewislanting@outlook.com">lewislanting@outlook.com</a></p>
+        <p class="small">&copy; Lewis Lanting <span id="year"></span> | <a href="mailto:lewislanting@outlook.com">lewislanting@outlook.com</a></p>
     </footer>
 </body>
 </html>

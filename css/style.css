@@ -26,10 +26,6 @@ a:hover {
     color: #ef233c;
 }
 
-span {
-    color: red;
-}
-
 .btn-primary {
     --bs-btn-bg: #d90429;
     --bs-btn-border-color: #d90429;
