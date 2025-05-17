@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -51,49 +53,95 @@
         <main class="col-md-9">
             <section class="text-center mb-5">
                 <h1 class="rood fw-bolder">Prometheus</h1>
-                <p class="fw-bolder">beschrijving</p>
+                <p class="fw-bolder">Een moderne monitoring stack</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>In dit project richtte ik een monitoringstack in voor mijn homelab met behulp van Prometheus, Grafana en Consul. Het doel was om een schaalbare, flexibele en geautomatiseerde monitoringoplossing te creëren die mij real-time inzichten biedt in de prestaties en beschikbaarheid van mijn servers. Prometheus fungeert hierbij als tijdreeksdatabase en scraper, Grafana als visualisatieplatform, en Consul als service discovery-tool. Door deze combinatie leerde ik niet alleen de werking van individuele tools, maar ook hoe je deze efficiënt integreert in een dynamische omgeving.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Verzamelen van metrics via pull-model en sla deze op in een tijdreeksdatabase.</li>
+                        <li class="list-group-item">Het aanbieden van dashboards en visualisatie van de data uit Prometheus.</li>
+                        <li class="list-group-item">Het automatisch detecteren van services en hosts via agents.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Een volledig werkende Prometheus-installatie die systematisch metrics verzamelt van meerdere nodes (CPU, geheugen, disk, uptime, etc.).</li>
+                        <li class="list-group-item">Integratie van Consul als service discovery mechanisme, zodat Prometheus automatisch nieuwe hosts en services detecteert zonder handmatige configuratie.</li>
+                        <li class="list-group-item">Een Grafana-dashboard waarin realtime en historische gegevens overzichtelijk worden weergegeven via grafieken, diagrammen en alerts.</li>
+                        <li class="list-group-item">Configuratiebestanden (prometheus.yml, consul.hcl, dashboard JSON exports) en opstartscripts voor herhaalbare deployment.</li>
+                        <li class="list-group-item">Documentatie van de hele setup, inclusief beschrijvingen van gebruikte exporters (zoals node_exporter) en visualisaties van de gegevensstroom tussen Consul, Prometheus en Grafana.</li>
+                        <li class="list-group-item">Screenshots van functionele dashboards en bewijs van werkende alerting via Grafana (optioneel via e-mail of webhook).</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Door dit project heb ik fundamentele inzichten opgedaan in monitoring, metrics-verwerking en automatisering van infrastructuurbeheer. Het gebruik van Consul als service discovery was bijzonder leerrijk: ik begreep hoe dynamische omgevingen automatisch gemonitord kunnen worden zonder handmatige ingrepen.
+                    Daarnaast ontwikkelde ik een dieper begrip van PromQL (Prometheus Query Language) en hoe belangrijk goede visualisatie is om snel en efficiënt inzicht te krijgen in systeemprestaties.
+                    Tot slot ervaarde ik het belang van goede documentatie, want bij fouten of uitbreidingen is herhaalbaarheid essentieel. Dit project gaf me de tools én het inzicht om monitoring professioneel in te zetten — een vaardigheid die onmisbaar is in DevOps- en systeembeheerrollen.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/computer-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/python.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
                 <h2 class="h5 fw-bolder">Gelijkaardige projecten</h2>
                 <p>Bekijk ook mijn andere projecten voor een breder beeld van mijn werk en expertise.</p>
                 <article class="p-3">
-                    <h3 class="h5">TopDesign</h3>
-                    <p>Netwerk structuur opbouwen</p>
-                    <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                    <h3 class="h5">Keystone</h3>
+                    <p>Openstack implementeren als een homelab</p>
+                    <figure>
+                        <a href="keystone.html"><img src="assets/images/keystone.jpg" alt="Foto van stad in de wolken" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
                     <h3 class="h5">AnsibleK3s</h3>
-                    <p>beschrijving</p>
-                    <a href="ansiblek3s.html"><img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van mensen op computers" class="img-fluid rounded-3 image-hover"></a>
+                    <p>Airgapped install of K3s through ansible</p>
+                    <figure>
+                        <a href="ansiblek3s.html"><img src="assets/images/python.jpg" alt="Foto van python boek" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>

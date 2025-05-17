@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -51,35 +53,73 @@
         <main class="col-md-9">
             <section class="text-center mb-5">
                 <h1 class="rood fw-bolder">AnsibleK3s</h1>
-                <p class="fw-bolder">beschrijving</p>
+                <p class="fw-bolder">Airgapped install of K3s through ansible</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>In dit project voerde ik een air-gapped installatie uit van K3s, een lightweight Kubernetes-distributie, op meerdere machines binnen mijn homelab. De installatie werd volledig geautomatiseerd via Ansible, een configuratie- en automatiseringstool gebaseerd op Python. Het doel van dit project was het opzetten van een Kubernetes-cluster zonder internettoegang op de doelmachines, wat in realistische omgevingen (zoals gesloten netwerken of industriële systemen) vaak voorkomt.
+                    De complexiteit van een air-gapped setup ligt in het vooraf ophalen, lokaal hosten en beschikbaar stellen van alle benodigde bestanden: K3s binaries, container images, Ansible roles en dependencies. Hierdoor kreeg ik een dieper inzicht in de werking van zowel K3s als Ansible en de onderliggende Python-bibliotheken.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Air-gapped betekent: geen internettoegang op de target nodes → dus alle K3s-binaries, images en dependencies moeten vooraf manueel of via een proxy worden voorbereid.</li>
+                        <li class="list-group-item">Gebruik van Ansible om alle taken te automatiseren: van systeemvoorbereiding tot het uitrollen van K3s.</li>
+                        <li class="list-group-item">Ik onderzocht hoe ik de Python-omgeving kon voorbereiden zonder externe repositories, met behulp van tools als pip download, venv, en apt-offline.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Een volledig functionerend K3s-cluster, geautomatiseerd uitgerold via Ansible op machines zonder internetverbinding.</li>
+                        <li class="list-group-item">Een lokale repository met alle benodigde: binaries, scripts, images, Python dependencies.</li>
+                        <li class="list-group-item">Ansible playbooks die in logische stappen zorgen voor: Installatie, configuratie, deployment, laden van images.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Dit project vergde een grondige voorbereiding en bracht me in contact met reële uitdagingen die je in beveiligde of industriële netwerken tegenkomt. Door te werken in een air-gapped context, werd ik gedwongen om elke afhankelijkheid te analyseren en lokaal beschikbaar te maken — van container images tot Python libraries.
+                    Ik kreeg een dieper begrip van hoe Ansible op Python is gebouwd en hoe het remote taken uitvoert. Vooral het feit dat Python op de target machines een harde vereiste is voor Ansible werd duidelijk, evenals het belang van versiebeheer en consistentie in bibliotheken.
+                    Dit project leerde mij het belang van automatisering én voorbereiding. Een fout in de afhankelijkheidsketen betekent volledige herinstallatie of troubleshooting zonder internettoegang. De combinatie van infrastructuurkennis, scripting, containerbeheer en Python package management maakt dit een van de meest technische en leerzame projecten die ik tot nu toe heb uitgevoerd.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/python.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/computer-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
@@ -88,12 +128,18 @@
                 <article class="p-3">
                     <h3 class="h5">TopDesign</h3>
                     <p>Netwerk structuur opbouwen</p>
-                    <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                    <figure>
+                        <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
                     <h3 class="h5">Prometheus</h3>
-                    <p>beschrijving</p>
-                    <a href="prometheus.html"><img src="assets/images/computer-sfeerbeeld.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <p>Een moderne monitoring stack</p>
+                    <figure>
+                        <a href="prometheus.html"><img src="assets/images/computer-sfeerbeeld.jpg" alt="Foto van mensen op computers" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>

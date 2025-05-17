@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -53,47 +55,92 @@
                 <h1 class="rood fw-bolder">Keystone</h1>
                 <p class="fw-bolder">Openstack implementeren als een homelab</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>In dit project installeerde en configureerde ik OpenStack op een Debian-machine in mijn eigen homelabomgeving, met focus op de Keystone-component. Keystone is het identity service-onderdeel van OpenStack en vormt de ruggengraat van authenticatie, autorisatie en servicebeheer binnen een OpenStack-cloud. Het doel van het project was om praktische ervaring op te doen met het opzetten van een cloudinfrastructuur, het beheren van gebruikers en rollen, en het begrijpen van de architectuur van een open source IaaS-platform.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Installatie van OpenStack-pakketten op Debian.</li>
+                        <li class="list-group-item">Handmatige configuratie van Keystone als identity service.</li>
+                        <li class="list-group-item">Integratie van Keystone met andere services via API endpoints.</li>
+                        <li class="list-group-item">Opzetten van projecten, gebruikers, rollen en tokens.</li>
+                        <li class="list-group-item">Toegang tot de OpenStack CLI en dashboard via geauthenticeerde sessies.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Een volledig werkende OpenStack-installatie met correct geconfigureerde Keystone-service.</li>
+                        <li class="list-group-item">Een functioneel gebruikers- en projectbeheer via Keystone.</li>
+                        <li class="list-group-item">CLI-authenticatie via environment scripts en tokens.</li>
+                        <li class="list-group-item">Documentatie van het volledige installatieproces, inclusief gebruikte configuratiebestanden, troubleshooting-stappen en commandoreeksen.</li>
+                        <li class="list-group-item">Screenshots en testresultaten van succesvolle gebruikersauthenticatie, roltoewijzing en toegang tot andere services via Keystone.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Dit project bood me een eerste diepgaande kennismaking met cloudinfrastructuur vanuit een infrastructuurbeheerstandpunt. Ik ontdekte hoe complex en modulair OpenStack is, en hoe belangrijk een correcte installatie- en configuratievolgorde is. Vooral de opbouw van Keystone – met services, endpoints, tokens en policies – heeft me waardevolle inzichten gegeven in hoe identiteitsbeheer werkt in een grootschalige cloudomgeving. Het werken in mijn eigen homelab gaf me ook ervaring met troubleshooting in een realistische context: van dependency issues tot foutmeldingen bij service authenticatie. Deze praktische kennis vormt een sterke basis voor wie later in cloud- of DevOps-rollen wil werken, en motiveert me om verder te bouwen aan een volledige OpenStack-omgeving.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/keystone.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/computer-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
                 <h2 class="h5 fw-bolder">Gelijkaardige projecten</h2>
                 <p>Bekijk ook mijn andere projecten voor een breder beeld van mijn werk en expertise.</p>
                 <article class="p-3">
-                    <h3 class="h5">TopDesign</h3>
-                    <p>Netwerk structuur opbouwen</p>
-                    <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                    <h3 class="h5">PrivEsc</h3>
+                    <p>Root toegang verkrijgen op Linux servers</p>
+                    <figure>
+                        <a href="privesc.html"><img src="assets/images/privesc.jpg" alt="Foto van een Tux de Linux mascotte" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
                     <h3 class="h5">AnsibleK3s</h3>
-                    <p>beschrijving</p>
-                    <a href="ansiblek3s.html"><img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <p>Airgapped install of K3s through ansible</p>
+                    <figure>
+                        <a href="ansiblek3s.html"><img src="assets/images/python.jpg" alt="Foto van python boek" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>

@@ -24,9 +24,6 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
 
-    <!-- voeg map.css toe. CSS specifiek voor de kaart -->
-    <link rel="stylesheet" href="css/map.css">
-
     <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -35,9 +32,11 @@
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/map.js" defer></script>
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
              <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">

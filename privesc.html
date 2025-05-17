@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -53,47 +55,89 @@
                 <h1 class="rood fw-bolder">PrivEsc</h1>
                 <p class="fw-bolder">Root toegang verkrijgen op Linux servers</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>Voor mijn magnum opus binnen het vak Cybersecurity Intro koos ik het thema Linux privilege escalation, een essentieel onderdeel binnen het domein van offensieve beveiliging. Het project had als doel om inzicht te verwerven in de manier waarop een kwaadwillende gebruiker beperkte toegangsrechten kan omzetten in rootrechten op een Linux-systeem. Het project werd opgebouwd rond drie pijlers: enumeration, exploitation en hardening. Naast theoretisch onderzoek voerde ik ook een praktische aanvalsdemo uit die de stappen van privilege escalation concreet illustreert.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Het verzamelen van systeeminformatie, gebruikersrechten, actieve processen, SUID/SGID-bestanden, sudo-configuraties, cronjobs en kwetsbaarheden.</li>
+                        <li class="list-group-item">Het uitbuiten van geïdentificeerde zwakheden, waaronder misbruik van slecht geconfigureerde sudo-rechten, cronjob-manipulatie, onveilige scriptpermissies en bekende kernel exploits.</li>
+                        <li class="list-group-item">Het toepassen van maatregelen om privilege escalation te voorkomen, zoals het beperken van rechten, monitoren van SUID-bestanden, en het verbeteren van logging en systeemupdates.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Een diepgaand onderzoeksdocument waarin enumeration-, exploitatie- en hardeningstrategieën uitgebreid worden toegelicht.</li>
+                        <li class="list-group-item">Een praktische demonstratie van een privilege escalation-aanval in een gecontroleerde Linux-omgeving. In deze demo escaleerde ik met succes van een gewone gebruiker naar root via een onveilig geconfigureerde cronjob gecombineerd met foutieve scriptpermissies.</li>
+                        <li class="list-group-item">Documentatie met commandoreeksen, analyses van tools zoals linpeas en sudo -l, en aanbevelingen voor mitigatie.</li>
+                        <li class="list-group-item">Een overzichtelijke hardening-checklist die systeembeheerders kunnen gebruiken om hun Linux-omgeving te beveiligen tegen privilege escalation.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Door dit magnum opus heb ik niet alleen mijn kennis over Linux en rechtenbeheer sterk verdiept, maar ook een duidelijk inzicht gekregen in hoe aanvallers denken en handelen. De combinatie van theorie, praktijk en demonstratie heeft me geleerd hoe kwetsbaarheden ontstaan en geëxploiteerd kunnen worden, én hoe je ze effectief kunt dichten. Ik leerde ook hoe belangrijk het is om niet enkel reactief, maar vooral proactief te beveiligen. Deze ervaring gaf me een solide basis in offensive én defensive security en sterkt mijn ambitie om verder te groeien in het cybersecuritydomein.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/privesc.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
                 <h2 class="h5 fw-bolder">Gelijkaardige projecten</h2>
                 <p>Bekijk ook mijn andere projecten voor een breder beeld van mijn werk en expertise.</p>
                 <article class="p-3">
-                    <h3 class="h5">TopDesign</h3>
-                    <p>Netwerk structuur opbouwen</p>
-                    <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                    <h3 class="h5">Keystone</h3>
+                    <p>Openstack implementeren als een homelab</p>
+                    <figure>
+                        <a href="keystone.html"><img src="assets/images/keystone.jpg" alt="Foto van stad in de wolken" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
                     <h3 class="h5">AnsibleK3s</h3>
-                    <p>beschrijving</p>
-                    <a href="ansiblek3s.html"><img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <p>Airgapped install of K3s through ansible</p>
+                    <figure>
+                        <a href="ansiblek3s.html"><img src="assets/images/python.jpg" alt="Foto van python boek" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>

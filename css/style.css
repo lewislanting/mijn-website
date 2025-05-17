@@ -55,3 +55,13 @@ a:hover {
 a:hover .image-hover {
     border-color: #ef233c;
 }
+
+.list-group {
+    --bs-list-group-color: #2b2d42;
+    --bs-list-group-bg: #f8f9fa;
+}
+
+#map {
+    height: 250px;
+    width: 100%;
+}

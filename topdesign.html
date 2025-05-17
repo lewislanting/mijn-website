@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -53,33 +55,70 @@
                 <h1 class="rood fw-bolder">TopDesign</h1>
                 <p class="fw-bolder">Netwerk structuur opbouwen</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>TopDesign is een fictief grafisch vormgevingsbedrijf dat recent geïnvesteerd heeft in een nieuwbouw. Binnen het kader van het vak Routering & Switching kregen mijn team en ik de opdracht om een volledige netwerkstructuur voor deze nieuwe vestiging te ontwerpen en implementeren. Van ons werd verwacht dat we dit project op een professionele en gestructureerde manier aanpakken, met als doel een degelijk en toekomstbestendig eindresultaat af te leveren.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">TopDesign is een groeiend bedrijf actief in de creatieve sector, waar betrouwbaarheid van het netwerk cruciaal is voor het verwerken en delen van zware grafische bestanden.</li>
+                        <li class="list-group-item">Onze opdracht was het opzetten van de volledige netwerkinfrastructuur, van de fysieke apparatuur tot aan de configuratie van logische netwerkservices.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Het opzetten van de netwerkstructuur inclusief: Switches, Router, Access Points.</li>
+                        <li class="list-group-item">Het implementeren van inter-VLAN routing via het Router-on-a-Stick principe.</li>
+                        <li class="list-group-item">Configuratie van alle noodzakelijke netwerkcomponenten: VLANs, Trunk links, SSH</li>
+                        <li class="list-group-item">Opzetten van DHCP voor automatische IP-toewijzing.</li>
+                        <li class="list-group-item">Configureren van NAT om interne netwerken met het internet te verbinden.</li>
+                        <li class="list-group-item">Toepassen van ACLs (Access Control Lists) om toegangsbeperkingen en beveiligingsregels af te dwingen.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Dit project bood mij en mijn team een realistische simulatie van hoe een netwerkproject in een professionele context wordt uitgevoerd. Ik heb waardevolle ervaring opgedaan met het configureren van geavanceerde netwerkfuncties zoals VLAN’s, router-on-a-stick, DHCP en NAT. Ook het correct documenteren en testen van netwerken was een essentieel onderdeel, wat mijn inzicht in het belang van planning, samenwerking en communicatie versterkt heeft. Door dit project heb ik niet alleen mijn technische vaardigheden verdiept, maar ook geleerd hoe belangrijk het is om gestructureerd en professioneel te werk te gaan in teamverband.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/topdesign.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/netwerk-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/webwiz.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
@@ -88,12 +127,18 @@
                 <article class="p-3">
                     <h3 class="h5">Webwiz</h3>
                     <p>Netwerk gestructureerd bekabelen</p>
-                    <a href="webwiz.html"><img src="assets/images/webwiz.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <figure>
+                        <a href="webwiz.html"><img src="assets/images/webwiz.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
-                    <h3 class="h5">AnsibleK3s</h3>
-                    <p>beschrijving</p>
-                    <a href="ansiblek3s.html"><img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <h3 class="h5">Keystone</h3>
+                    <p>Openstack implementeren als een homelab</p>
+                    <figure>
+                        <a href="keystone.html"><img src="assets/images/keystone.jpg" alt="Foto van stad in de wolken" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>

@@ -18,9 +18,11 @@
 
     <!-- Eigen JavaScript-bestanden-->
     <script src="js/year.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body class="container">
     <header>
+        <div id="location" class="text-center small mt-1 reverse"></div>
         <nav class="navbar navbar-expand">
             <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Foto van de website logo" width="100"></a>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -53,33 +55,73 @@
                 <h1 class="rood fw-bolder">Webwiz</h1>
                 <p class="fw-bolder">Netwerk gestructureerd bekabelen</p>
             </section>
-            <h2 class="h4">Beschrijving</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque distinctio aliquam rerum, dolores illo blanditiis voluptatum consectetur aut officiis inventore, facere id, nisi quis a ab sunt optio natus provident! Tenetur suscipit ex fugit a aut repellendus aspernatur nostrum ad veritatis maiores officiis accusamus quam unde, vero, eos recusandae sapiente libero iure tempore, optio dolor. Explicabo veniam ratione sed molestias deserunt sint dolorum. Tempore expedita at perferendis! Doloremque, quod tempore. Non, voluptatem at, animi, suscipit facere cumque minima reprehenderit amet ex doloremque nihil architecto? Aliquam error placeat reiciendis amet, earum excepturi nostrum sit nesciunt natus inventore minus odit ratione magni.</p>
-            <h2 class="h4">Sfeerbeelden</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mb-3">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/images/numbergrep.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/cybersecurity-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/images/linux-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-              </div>
+            <section>
+                <article class="mb-3">
+                    <h2 class="h4">Beschrijving</h2>
+                    <p>Webwiz is een fictieve firma ontwikkeld als casus voor het vak Datacom & Netwerken. Het bedrijf bevindt zich in een groeifase en liet in het verleden een netwerkontwerp opstellen voor hun nieuwbouw. Helaas bleek de eerder aangestelde firma geen belang te hechten aan gestructureerde bekabeling, wat het risico op toekomstige netwerkproblemen aanzienlijk vergrootte. Gelukkig herkende Webwiz tijdig de gebreken in het ontwerp en besloten ze mij in te schakelen om een nieuw, professioneel en gestructureerd bekabelingsplan uit te werken dat volledig aansluit bij de huidige én toekomstige noden van het bedrijf.</p>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Situatieschets</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Het bedrijf telt 24 medewerkers, elk met een vaste werkplek.</li>
+                        <li class="list-group-item">Er zijn 2 on-premises servers voorzien, met fysieke toegang enkel voor gemachtigd personeel.</li>
+                        <li class="list-group-item">De organisatie zal beschikken over 20 desktops en 10 laptops, waarvan 6 als flexibele uitleentoestellen functioneren.</li>
+                        <li class="list-group-item">Alle laptops dienen draadloos te kunnen werken.</li>
+                        <li class="list-group-item">Elke werkplek is voorzien van een VoIP-telefoon.</li>
+                        <li class="list-group-item">In elk kantoor staat een multifunctionele printer (MFP).</li>
+                        <li class="list-group-item">Alle eindapparaten zijn single-homed aangesloten.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Eindoplevering</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Een gedetailleerde aankooplijst op te stellen met alle benodigde netwerkcomponenten (switches, access points, patchpanelen, bekabeling, etc.).</li>
+                        <li class="list-group-item">Een bekabelingsplan te ontwerpen en te visualiseren met Cisco Packet Tracer.</li>
+                        <li class="list-group-item">Een racklayout te creëren, inclusief alle apparatuur, met aanduiding van het aantal U-units dat elk toestel in beslag neemt.</li>
+                        <li class="list-group-item">Een patchplan op te stellen dat duidelijk weergeeft welke outlet verbonden is met welke punch op het patchpanel en elke poort op het patchpanel gekoppeld is aan welke poort op de switch.</li>
+                    </ul>
+                </article>
+                <article class="mb-3">
+                    <h2 class="h4">Reflectie</h2>
+                    <p>Door dit project heb ik diepgaand inzicht verworven in het ontwerpen van een gestructureerde netwerkinfrastructuur vanaf nul. Ik leerde niet alleen hoe ik technische specificaties vertaal naar een realistisch netwerkplan, maar ook hoe belangrijk het is om oog te hebben voor schaalbaarheid, veiligheid, onderhoudsgemak en documentatie. Daarnaast heb ik mijn vaardigheden in Packet Tracer, logisch redeneren bij het maken van rack- en patchplannen, en het opstellen van professionele aankooplijsten sterk kunnen verbeteren. Dit project gaf me een realistisch beeld van de vereisten en uitdagingen in een professionele IT-omgeving.</p>
+                </article>
+                <article>
+                    <h2 class="h4">Sfeerbeelden</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mb-3">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/netwerk-sfeerbeeld.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/topdesign.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/webwiz.jpg" class="d-block w-100 rounded-3" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>&copy; Pexels</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </article>
+            </section>
         </main>
         <aside class="col-md-3">
             <section class="position-sticky top-0 p-2 g-4 small text-center">
@@ -88,12 +130,18 @@
                 <article class="p-3">
                     <h3 class="h5">TopDesign</h3>
                     <p>Netwerk structuur opbouwen</p>
-                    <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                    <figure>
+                        <a href="topdesign.html"><img src="assets/images/topdesign.jpg" alt="Foto van servers" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
                 <article class="p-3">
                     <h3 class="h5">AnsibleK3s</h3>
-                    <p>beschrijving</p>
-                    <a href="ansiblek3s.html"><img src="assets/images/netwerk-sfeerbeeld.jpg" alt="Foto van gestructureerde bekabeling" class="img-fluid rounded-3 image-hover"></a>
+                    <p>Airgapped install of K3s through ansible</p>
+                    <figure>
+                        <a href="ansiblek3s.html"><img src="assets/images/python.jpg" alt="Foto van python boek" class="img-fluid rounded-3 image-hover"></a>
+                        <figcaption>&copy; Pexels</figcaption>
+                    </figure>
                 </article>
             </section>
         </aside>
